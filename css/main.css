@@ -2434,6 +2434,9 @@ header .logo a {
 	font-size: 4.2rem;
 	color: #FFFFFF;
 }
+.contact-info h3 {
+	color: #cccccc;
+}
 .contact-info h5 {
 	color: #039BE5;
 }
