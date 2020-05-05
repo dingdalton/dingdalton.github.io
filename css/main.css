@@ -1306,7 +1306,7 @@ header .logo a {
  no-repeat center bottom
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom fixed;
+	background: #151515 url("https://daltonding.me/images/intro-bg.jpg") no-repeat center bottom fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
