@@ -1808,6 +1808,7 @@ header .logo a {
 	padding: 0;
 	position: relative;
 	overflow: hidden;
+	max-height: 14em;
 }
 #portfolio .folio-item img {
 	vertical-align: middle;
@@ -1822,7 +1823,7 @@ header .logo a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 88%;
 	height: 100%;
 	background: transparent;
 	-moz-transition: all 0.5s ease-in-out;
@@ -2431,6 +2432,7 @@ header .logo a {
 	margin-bottom: 2.1rem;
 }
 .contact-info .icon i {
+	padding: 1.5rem;
 	font-size: 4.2rem;
 	color: #FFFFFF;
 }
@@ -2610,3 +2612,133 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 14em;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+.align-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.gallery-text {
+	padding-top: 1em;
+}
+
+.contact-icon {
+	display: block;
+	width: 100%;
+	bottom: 7.2rem;
+	font-size: 3.3rem;
+	margin: 0;
+	padding: 0;
+}
+.contact-icon li {
+	display: inline-block;
+	margin: 0 20px;
+	padding: 0;
+}
+.contact-icon li a, .intro-social li a:visited {
+	color: #FFFFFF;
+}
+.contact-icon li a:hover, .intro-social li a:focus {
+	color: #2196F3;
+}
+
+.copyright {
+	margin: 4em 0 2.5em 0;
+}
