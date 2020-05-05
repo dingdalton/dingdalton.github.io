@@ -1302,9 +1302,11 @@ header .logo a {
  * 10. intro - (_layout.scss)
  *
  * -------------------------------------------------------------------
+ no-repeat center center fixed
+ no-repeat center bottom
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
