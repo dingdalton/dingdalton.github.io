@@ -2734,10 +2734,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 	margin: 0 20px;
 	padding: 0;
 }
-.contact-icon li a, .intro-social li a:visited {
+.contact-icon li a, .contact-icon li a:visited {
 	color: #FFFFFF;
 }
-.contact-icon li a:hover, .intro-social li a:focus {
+.contact-icon li a:hover, .contact-icon li a:focus {
 	color: #2196F3;
 }
 
