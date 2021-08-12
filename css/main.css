@@ -597,7 +597,7 @@ select:focus {
 	color: #2196F3;
 	border-bottom: 1px solid #039BE5;
 }
-039BE5
+
 label, legend {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.4rem;
@@ -726,7 +726,6 @@ button.large, .button.large {
 	padding: 0rem 3rem !important;
 }
 button.stroke, .button.stroke {
-	background: transparent !important;
 	border: 3px solid #313131;
 	line-height: 4.8rem;
 }
@@ -1366,11 +1365,11 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #2196F3;
+	color: #bbbbbb;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
-	margin-bottom: 0;
+	margin-bottom: 0.5rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -1381,7 +1380,7 @@ header .logo a {
 	line-height: 2.4rem;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
-	color: #FFFFFF;
+	color: #c5c5c5;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position span {
@@ -1403,10 +1402,11 @@ header .logo a {
 }
 .intro-content .button {
 	color: #FFFFFF !important;
-	border-color: rgba(255, 255, 255, 0.3);
-	height: 6rem !important;
-	line-height: 5.4rem !important;
-	padding: 0 3.5rem 0 3rem !important;
+	background-color: rgba(33, 150, 243, 0.8) !important;
+	border-color: rgba(3, 155, 229, 0);
+	height: 5rem !important;
+	line-height: 4.5rem !important;
+	padding: 0 2rem 0 2rem !important;
 	margin-top: .6rem;
 	font-size: 1.3rem;
 	text-transform: uppercase;
@@ -1415,23 +1415,14 @@ header .logo a {
 .intro-content .button:hover, .intro-content .button:focus {
 	border-color: #2196F3;
 }
-.intro-content .button::after {
-	display: inline-block;
-	content: "\f107";
-	font-family: fontAwesome;
-	font-size: 1.6rem;
-	line-height: inherit;
-	text-align: center;
-	position: relative;
-	left: 1.2rem;
-}
+
 
 .intro-social {
 	display: block;
 	position: absolute;
 	width: 100%;
 	left: 0;
-	bottom: 7.2rem;
+	bottom: 22%;
 	font-size: 3.3rem;
 	margin: 0;
 	padding: 0;
@@ -1439,7 +1430,7 @@ header .logo a {
 .intro-social li {
 	display: inline-block;
 	margin: 0 20px;
-	padding: 0;
+	font-size: 4.3rem;
 }
 .intro-social li a, .intro-social li a:visited {
 	color: #FFFFFF;
@@ -1538,6 +1529,7 @@ header .logo a {
 	border-radius: 50%;
 	margin: .9rem 0 0 0;
 	float: left;
+	object-fit: cover;
 }
 .intro-info .lead {
 	text-align: left;
@@ -1716,6 +1708,12 @@ header .logo a {
 	font-size: 1.6rem;
 	color: #888888;
 }
+
+#resume .location {
+	margin-top: -3rem;
+	font-style: italic;
+}
+
 #resume .timeline-content {
 	margin-left: 35%;
 	padding-left: 60px;
